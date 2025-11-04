@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FYM DuckDuckGo Clone</title>
+  <title>FYM Proxy Clone</title>
   <style>
     html, body {
       margin: 0;
+      padding: 0;
       height: 100%;
-      overflow: hidden;
     }
     iframe {
-      border: none;
       width: 100%;
       height: 100%;
+      border: none;
     }
   </style>
 </head>
 <body>
-  <iframe src="https://jsproxy1.jimmytinsley.workers.dev/-----https://duckduckgo.com/"></iframe>
+  <iframe id="proxyFrame" src="https://jsproxy1.jimmytinsley.workers.dev/-----https://duckduckgo.com/"></iframe>
+
+  <script>
+    // Optional JS: dynamically change iframe URL
+    function loadProxy(url) {
+      document.getElementById('proxyFrame').src = url;
+    }
+
+    // Example usage: switch to another site
+    // loadProxy("https://jsproxy1.jimmytinsley.workers.dev/-----https://example.com/");
+  </script>
 </body>
 </html>
